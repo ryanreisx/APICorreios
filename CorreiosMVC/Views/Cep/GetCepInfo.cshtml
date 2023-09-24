@@ -1,0 +1,65 @@
+﻿@model ViaCepModel
+
+@{
+    ViewData["Title"] = "Detalhes do CEP";
+}
+
+
+<div class="text-center">
+    <form asp-controller="Cep" asp-action="GetCepInfo" method="get" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" name="cep" placeholder="Digite o CEP" aria-label="Search"><br />
+        <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+    </form>
+</div>
+
+</br>
+
+<div class="container text-center">
+    <h1>Detalhes do CEP</h1>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Cep:</label>
+                        <span class="form-control">@Model.Cep</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Logradouro:</label>
+                        <span class="form-control">@Model.Logradouro</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Complemento:</label>
+                        <span class="form-control">@Model.Complemento</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Bairro:</label>
+                        <span class="form-control">@Model.Bairro</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Localidade:</label>
+                        <span class="form-control">@Model.Localidade</span>
+                    </div>
+                    <div class="form-group">
+                        <label>UF:</label>
+                        <span class="form-control">@Model.Uf</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Unidade:</label>
+                        <span class="form-control">@Model.Unidade</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Ibge:</label>
+                        <span class="form-control">@Model.Ibge</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Gia:</label>
+                        <span class="form-control">@Model.Gia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
